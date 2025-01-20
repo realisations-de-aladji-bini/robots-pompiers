@@ -60,13 +60,16 @@ La simulation devrait alors s'ouvrir.
 
 Vous avez la possibilité de choisir la carte et la stratégie que vous souhaitez utiliser. Pour cela, vous pouvez
 utiliser les ﬂags carte et strategie. La syntaxe est la suivante :
-```sh make exeRunSimulation [carte=<carte>] [strategie=<strategie>]``` 
+
+``` make exeRunSimulation [carte=<carte>] [strategie=<strategie>]``` 
+
 où *[carte=<carte>] (facultatif)*: Nom de la carte à utiliser (nom du ﬁchier + extension, sans le
 chemin). Par défaut, la carte utilisée est carteSujet.map.
 *[strategie=<strategie>] (facultatif)*: Stratégie à utiliser. Les stratégies disponibles sont
 elementaire et evolue. Par défaut, la stratégie utilisée est evolue.
+
 Exemple :
-```sh make exeRunSimulation carte=carteSujet.map strategie=evolue```
+``` make exeRunSimulation carte=carteSujet.map strategie=evolue```
 
 - **Exécution de la simulation**
 
@@ -81,16 +84,25 @@ Le bouton **Début** permet de revenir au début de la simulation.
 
 D'autres tests sont disponibles dans le dossier src/tests permettant de tester divers aspects du
 programme. Il s'agit entre autres :
-make exeInvader : permet de lancer le jeu Invader
-```sh  make exeAffichageCarte``` : permet de s'assurer que le ﬁchier .map passé en
+
+```make exeInvader``` : permet de lancer le jeu Invader
+
+```make exeAffichageCarte``` : permet de s'assurer que le ﬁchier .map passé en
 paramètre est bien sérialisé et aﬃché correctement sur la carte graphique.
-```sh make exeLecture``` : Lire les données dans le ﬁchier carteSujet.map puis les aﬃche
-```sh make exeLecteurDonneesKO``` : permet de s’assurer que des exceptions sont levées lorsqu’on tente
+
+```make exeLecture``` : Lire les données dans le ﬁchier carteSujet.map puis les aﬃche
+
+```make exeLecteurDonneesKO``` : permet de s’assurer que des exceptions sont levées lorsqu’on tente
 de lire des ﬁchiers .map mal construits (carteSujet_KO_*. map)
-```sh make exeScenario0``` : teste le scénario KO décrit dans le sujet
-```sh make exeScenario1``` : teste le scénario OK décrit dans le sujet
-```sh make exeDijkstra``` : Teste le plus court chemin vers une destination et le traduit en évènements de
+
+```make exeScenario0``` : teste le scénario KO décrit dans le sujet
+
+```make exeScenario1``` : teste le scénario OK décrit dans le sujet
+
+```make exeDijkstra``` : Teste le plus court chemin vers une destination et le traduit en évènements de
 déplacement à ajouter au simulateur
-```sh make exeDijkstraFilter``` : Teste le calcul du chemin vers la case la plus proche remplissant la
+
+```make exeDijkstraFilter``` : Teste le calcul du chemin vers la case la plus proche remplissant la
 fonction de ﬁltrage
-```sh make exeRunSimulation``` : permet d’exécuter une stratégie sur une carte
+
+```make exeRunSimulation``` : permet d’exécuter une stratégie sur une carte
